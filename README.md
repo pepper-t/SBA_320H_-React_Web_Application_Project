@@ -13,10 +13,18 @@ Unsolved problems.\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
-## React Compiler
+## Web Application: HouseTrap Free Zone 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is a basic and different version of the Capstone project. It is an educational website application for aspiring real estate investors who want to know the best way to learn how to invest in real estate without getting scammed. 
+
+EXTERNAL SOURCE: I have chosen OpenLibrary.org as the source to use. There are numerous books in the real estate investment niche.
+
+## Development Process
+
+To get started on the frontend I installed:
+Vite: npm create vite@latest .
+Axios: npm i axios
+React Router: npm i react-router-dom
+
 
 ## Errors
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
