@@ -41,7 +41,15 @@ I also watched a YouTube Video: "Book Search App With Open Library Search API Us
 
 to get a better understanding of how to integrate the Open Library api url into my code.
 
+* * *
+The script is working but now the images take up the whole width of the page. I will adjust in the css files
+The pages that I am using are: 
 
+App.jsx
+/components/BookList.jsx
+/components/Form.jsx
+/src/BookList.css
+/src/Form.css
 
 
 
