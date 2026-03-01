@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import "/src/App.css";
 
-import LibraryBooks from "./LibraryBooks";
+import LibraryBooks from "./BookList";
 import Form from "../components/Form";
 
 const API_URL = "https://openlibrary.org/search.json?q=";
