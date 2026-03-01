@@ -1,8 +1,50 @@
 
+
+import { useState } from "react";
+//import "./Form.css";
+
+export default function Form (props) {
+  // State to hold the data of our form
+  const [formData, setFormData] = useState({
+    searchterm: "",
+  });   
+
+    // handleChange - updates formData when we type into form
+    const handleChange = (event) => {
+      setFormData({ ...formData, [event.target.name]: event.target.value });
+    };
+
+    const handleSubmit = (event) => {
+      // Prevent page from refreshing on form submission
+      event.preventDefault();
+
+      // Call the booksearch prop with the formData.searchterm value
+      props.booksearch(formData.searchterm);
+    };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="searchterm"
+          onChange={handleChange}
+          value={formData.searchterm}
+        />
+        <input type="submit" value="submit" />
+      </form>
+    </div>
+  );
+}
+
+
+
+/*
+
 import { useState, useEffect } from "react";
 import "/src/App.css";
 
-import LibraryBooks from "./BookList";
+import BookList from "../components/BookList.jsx";
 import Form from "../components/Form";
 
 const API_URL = "https://openlibrary.org/search.json?q=";
@@ -40,6 +82,7 @@ export default function App() {
     </div>
   );
 }
+*/
 
 
 
