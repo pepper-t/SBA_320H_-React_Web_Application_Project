@@ -1,11 +1,11 @@
 
-//import "./BookList.css";
+import "../components/BookList.css";
 
 export default function BookList({ books }) {
   return books ? (
-    <div>
+    <div className="book-list">
       {books.map((book, index) => (
-        <div key={index}>
+        <div key={index} className="book-card">
           <h1>{book.title}</h1>
           <h2>{book.author_name ? book.author_name[0] : "Author Unknown"}</h2>
           <img

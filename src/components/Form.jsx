@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-//import "./Form.css";
+import "../components/Form.css";
 
 export default function Form (props) {
   // State to hold the data of our form
@@ -24,6 +24,8 @@ export default function Form (props) {
 
   return (
     <div>
+       <fieldset style={{ textAlign: "center" }}>
+        <legend>Real Estate Library Book App</legend>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -33,6 +35,7 @@ export default function Form (props) {
         />
         <input type="submit" value="submit" />
       </form>
+      </fieldset>
     </div>
   );
 }
