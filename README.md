@@ -48,9 +48,26 @@ The pages that I am using are:
 App.jsx
 /components/BookList.jsx
 /components/Form.jsx
-/src/BookList.css
-/src/Form.css
+/components/BookList.css
+/components/Form.css
 
 
+### Helpful Sources
 
+YouTube Video: "Book Search App With Open Library Search API Using React JS | React JS Project For Beginners" - GeekProbin - According to the comments section there were flaws in the code, whci led to errors.
 
+Medium: Article for creating a simple book search app using React and the Open Library API from scratch - https://medium.com/@kol3wang/building-a-beginner-friendly-book-search-and-library-with-react-7b964f8e615c 
+
+Dev.To: https://dev.to/fonyuygita/your-gateway-to-building-readtrackr-mastering-the-open-library-api-j9n 
+Note: This article presenting info that was wrong. Many of the requests in the code were outside the components, according to Ai which is why it did not work. But even when the script was fixed it did not operate properly. 
+
+A clickable search box appeared but was not responsive.
+
+### Starting Over
+
+I went back and used the codes for App.jsx and commented out the last two updates.
+I added Form.css and BookList.css with some suggestions from AI and using React_Superhero frontend code done in class (2/18/26).
+
+The app is identifiable and functioning properly. I wish I had more time to style it. Most of the time was spent debugging the code.
+
+I deleted the unnecessary files: NavBar.jsx, BookDetails.jsx, and Headers.jsx in github because they were not necessary.
