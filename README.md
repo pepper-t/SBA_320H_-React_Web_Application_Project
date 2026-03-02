@@ -13,7 +13,7 @@ Unsolved problems.\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
-## Web Application: HouseTrap Free Zone 
+## Web Application: Real Estate Library Book App 
 
 This is a basic and different version of the Capstone project. It is an educational website application for aspiring real estate investors who want to know the best way to learn how to invest in real estate without getting scammed. 
 
@@ -71,3 +71,11 @@ I added Form.css and BookList.css with some suggestions from AI and using React_
 The app is identifiable and functioning properly. I wish I had more time to style it. Most of the time was spent debugging the code.
 
 I deleted the unnecessary files: NavBar.jsx, BookDetails.jsx, and Headers.jsx in github because they were not necessary.
+
+###### INSTRUCTIONS ######
+
+The Real Estate Library Book App is a search form used to search for library books in the real estate niche. 
+
+1 The real estate books will pre-populate the page
+2 You can put your own search words in the search box to find your own list of books
+3 Click the submit button and a list of books will appear below the search form.
