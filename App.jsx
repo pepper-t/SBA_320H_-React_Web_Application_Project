@@ -1,5 +1,70 @@
 
 
+import { useState, useEffect } from "react";
+import "./App.css";
+
+
+// Import our components
+import Form from "./components/Form";
+import BookList from "./components/BookList";
+
+
+const API_URL = "https://openlibrary.org/search.json?q=";
+
+const headers = new Headers({
+  "User-Agent": "Real Estate Library Book App (shaheed3113@gmail.com)",
+});
+
+const options = {
+  method: 'GET',
+  headers: headers
+};
+
+export default function App() {
+  const [books, setBooks] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  function getBook(searchTerm = "real+estate") {
+    fetch(API_URL + searchTerm, options)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setBooks(data.docs); // store just the docs array
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      });
+  }
+
+  useEffect(() => {
+    getBook();
+  }, []);
+
+  return (
+    <div className="App">
+      <Form booksearch={getBook} />
+      {loading && <p>Loading...</p>}
+      <BookList books={books} />
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
 //Don't like this code. A search bar appears but takes me nowhere.
 
 /*
@@ -253,65 +318,6 @@ useEffect(() => {
 }, [debouncedSearchTerm]);
 
 */
-
-
-import { useState, useEffect } from "react";
-import "./App.css";
-
-
-// Import our components
-import Form from "./components/Form";
-import BookList from "./components/BookList";
-
-
-const API_URL = "https://openlibrary.org/search.json?q=";
-
-const headers = new Headers({
-  "User-Agent": "Real Estate Library Book App (shaheed3113@gmail.com)",
-});
-
-const options = {
-  method: 'GET',
-  headers: headers
-};
-
-export default function App() {
-  const [books, setBooks] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  function getBook(searchTerm = "real+estate") {
-    fetch(API_URL + searchTerm, options)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setBooks(data.docs); // store just the docs array
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
-  }
-
-  useEffect(() => {
-    getBook();
-  }, []);
-
-  return (
-    <div className="App">
-      <Form booksearch={getBook} />
-      {loading && <p>Loading...</p>}
-      <BookList books={books} />
-    </div>
-  );
-}
-
-
-
 
 
 //Updated with Open Library's API and added a search form. See README.md for details.
